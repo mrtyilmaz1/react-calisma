@@ -20,23 +20,32 @@ function App() {
 
   const createUser = async (newUser) => {
     const response = await axios.post(`${BASE_URL}/users`, newUser);
-    console.log("responsa:", response.data)
+    console.log("response:", response.data)
 
   }
 
   const updateUser = async (userId, updatedUser) => {
     const response = await axios.put(`${BASE_URL}/users/${userId}`, updatedUser)
+    console.log("response:", response.data)
+
+  }
+
+  const deleteUser = async (userId) => {
+    const response = await axios.delete(`${BASE_URL}/users/${userId}`)
+    console.log("response:", response.data)
+
   }
 
   useEffect(() => {
     // getAllUsers()
     // getUserById(2)
-    const newUser = {
-      "username": "Umut",
-      "password": "11"
-    }
+    // const newUser = {
+    //   "username": "Umut",
+    //   "password": "11"
+    // }
     // createUser(newUser)
-    updateUser("1", newUser)
+    // updateUser("1", newUser)
+    deleteUser("1dc7")
   }, [])
 
 
