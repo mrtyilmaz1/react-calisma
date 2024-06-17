@@ -18,9 +18,20 @@ function App() {
 
   }
 
+  const createUser = async (newUser) => {
+    const response = await axios.post(`${BASE_URL}/users`, newUser);
+    console.log("responsa:", response.data)
+
+  }
+
   useEffect(() => {
     // getAllUsers()
-    getUserById(2)
+    // getUserById(2)
+    const newUser = {
+      "username": "Ahmet",
+      "password": "22"
+    }
+    createUser(newUser)
   }, [])
 
 
