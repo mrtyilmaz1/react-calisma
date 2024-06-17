@@ -24,14 +24,19 @@ function App() {
 
   }
 
+  const updateUser = async (userId, updatedUser) => {
+    const response = await axios.put(`${BASE_URL}/users/${userId}`, updatedUser)
+  }
+
   useEffect(() => {
     // getAllUsers()
     // getUserById(2)
     const newUser = {
-      "username": "Ahmet",
-      "password": "22"
+      "username": "Umut",
+      "password": "11"
     }
-    createUser(newUser)
+    // createUser(newUser)
+    updateUser("1", newUser)
   }, [])
 
 
