@@ -4,11 +4,13 @@ import { FaEdit } from "react-icons/fa";
 import "../App.css"
 
 
-function Todo() {
+
+function Todo({ todo }) {
+    const { id, content } = todo;
     return (
         <div className="todo">
             <div >
-                ilk todo
+                {content}
             </div>
             <div className="todo-icons">
                 <IoIosRemoveCircle style={{ marginRight: "5px" }} />
