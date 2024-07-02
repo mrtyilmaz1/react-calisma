@@ -1,9 +1,9 @@
 import Container from '@mui/material/Container';
 
-function PageContainer({ childeren }) {
+function PageContainer({ children }) {
     return (
         <Container>
-            {childeren}
+            {children}
         </Container>
     )
 }

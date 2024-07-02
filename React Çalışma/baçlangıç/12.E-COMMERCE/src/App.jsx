@@ -1,6 +1,7 @@
 
 import './App.css'
 import Header from './components/Header'
+import ProductList from './components/ProductList'
 import PageContainer from './container/PageContainer'
 
 
@@ -9,7 +10,10 @@ function App() {
   return (
     <div>
 
-      <PageContainer PageContainer childeren={<Header />} >
+      <PageContainer >
+
+        <Header />
+        <ProductList />
 
       </PageContainer>
 
