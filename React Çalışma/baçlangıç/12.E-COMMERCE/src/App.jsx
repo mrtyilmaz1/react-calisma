@@ -1,11 +1,18 @@
 
 import './App.css'
+import Header from './components/Header'
+import PageContainer from './container/PageContainer'
+
 
 function App() {
 
   return (
     <div>
-      asdzas
+
+      <PageContainer PageContainer childeren={<Header />} >
+
+      </PageContainer>
+
     </div>
   )
 }
